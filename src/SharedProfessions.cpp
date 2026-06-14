@@ -184,7 +184,7 @@ private:
             if (!player->HasSkill(skill->id))
                 continue;
 
-            uint16 value = player->GetSkillValue(skill->id);
+            uint16 value = player->GetPureSkillValue(skill->id);
             uint16 maxVal = player->GetPureMaxSkillValue(skill->id);
             uint16 step = player->GetSkillStep(skill->id);
 
@@ -245,7 +245,7 @@ private:
                     continue;
 
                 uint16 playerStep = player->GetSkillStep(skillId);
-                uint16 playerValue = player->GetSkillValue(skillId);
+                uint16 playerValue = player->GetPureSkillValue(skillId);
                 uint16 playerMax = player->GetPureMaxSkillValue(skillId);
 
                 if (acctStep > playerStep)
